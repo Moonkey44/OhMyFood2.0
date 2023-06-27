@@ -1,0 +1,491 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Shrikhand&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family: "Shrikhand", "sans-serif";
+  font-weight: normal;
+}
+
+p, li {
+  font-family: "Roboto", "sans-serif";
+}
+
+a {
+  color: inherit;
+}
+
+.header {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+}
+.header img {
+  position: absolute;
+  width: 60%;
+  max-width: 12em;
+}
+
+@media screen and (min-width: 520px) {
+  .header {
+    height: 80px;
+  }
+}
+footer {
+  background-color: #333333;
+  color: white;
+  height: 250px;
+  padding-top: 30px;
+  padding-left: 7%;
+}
+footer mark {
+  color: white;
+  font-weight: normal;
+  padding-left: 0;
+}
+footer h2 {
+  margin-top: 0;
+  font-size: 1.4em;
+  margin-left: 0;
+  text-align: left;
+}
+footer li:first-child {
+  margin-left: 5px;
+}
+footer li {
+  margin-bottom: 10px;
+  display: flex;
+  font-size: 1em;
+}
+footer li span {
+  margin-right: 8px;
+  font-size: 0.8em;
+}
+footer .fa-handshake-angle {
+  transform: rotate(-12deg);
+  margin-left: 2px;
+  font-size: 0.7em;
+}
+
+@media screen and (min-width: 520px) {
+  footer h2 {
+    font-size: 1.6em;
+  }
+  footer li {
+    font-size: 1.3em;
+  }
+}
+@-webkit-keyframes card-translate {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes card-translate {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+h3 {
+  font-size: 25px;
+  margin-bottom: 0px;
+  margin-top: 25px;
+}
+
+header {
+  align-items: center;
+  position: relative;
+}
+header .fa-arrow-left {
+  position: absolute;
+  font-size: 24px;
+  left: 30px;
+  top: 18px;
+  opacity: 0.77;
+}
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.menu {
+  margin-top: -75px;
+  width: 100%;
+  border-radius: 65px 65px 0 0;
+  background-color: #eaf0fa;
+  position: relative;
+}
+.menu header {
+  justify-content: left;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+}
+.menu header .fa-heart {
+  font-size: 38px;
+}
+.menu header .fa-heart::after {
+  position: absolute;
+  top: 23%;
+  right: 8%;
+  content: "\f004";
+  opacity: 1;
+  font-weight: 100;
+}
+.menu header .fa-heart::before {
+  position: absolute;
+  top: 23%;
+  right: 8%;
+  content: "\f004";
+  opacity: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  font-weight: bold;
+  color: transparent;
+  transform: scale(0);
+}
+.menu header .fa-heart:hover::after {
+  opacity: 0;
+}
+.menu header .fa-heart:hover::before {
+  transform: scale(1);
+  transition: all 350ms;
+  opacity: 1;
+}
+.menu header .fa-heart::after {
+  top: 53%;
+}
+.menu header .fa-heart::before {
+  top: 53%;
+}
+.menu header .fa-heart {
+  font-size: 35px;
+}
+.menu header h2 {
+  padding-top: 70px;
+  font-size: 1.4em;
+}
+.menu__article {
+  width: 100%;
+}
+.menu__article fieldset {
+  display: inline-block;
+  margin-top: 20px;
+  min-width: 100%;
+  padding: 0;
+}
+.menu__article legend {
+  display: block;
+  border-bottom: #99E2D0 3px solid;
+  width: 12%;
+  padding-bottom: 5px;
+  font-size: 1em;
+}
+.menu form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+  background: white;
+  align-items: center;
+  margin: 15px 0 10px 0;
+  height: 75px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 0.75);
+  width: 100%;
+  overflow: hidden;
+}
+.card__description {
+  font-size: 0.9em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 4%;
+  width: 82%;
+}
+.card__description h3 {
+  margin: 0 0 10px 0;
+  font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card__description p {
+  display: inline;
+  font-size: 1em;
+}
+.card__price {
+  font-weight: bold;
+  padding: 30px 0 0 0;
+  margin-left: auto;
+  font-size: 0.9em;
+}
+.card .fa-solid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: white;
+  text-align: center;
+  background: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  line-height: 20px;
+  width: 20%;
+  margin: 0 -20% 0 1em;
+}
+.card .fa-solid::after {
+  content: "\f00c";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: #99E2D0;
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+}
+.card:hover .fa-solid {
+  margin-right: 0;
+  transition: margin 600ms;
+}
+.card:hover .fa-solid::after {
+  transform: rotate(2turn);
+  transition: transform 600ms;
+}
+
+.order {
+  margin: 35px auto 80px auto;
+  color: white;
+  border-radius: 40px;
+  box-shadow: 0px 5px 5px 2px rgba(207, 203, 203, 0.7019607843);
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  width: 60%;
+  height: 50px;
+  font-size: 1em;
+}
+.order:hover {
+  background-image: linear-gradient(#ff88de, #9b63df);
+  box-shadow: 0px 5px 5px 2px rgb(207, 203, 203);
+}
+
+footer ul {
+  margin-top: 30px;
+}
+
+.anim1 {
+  -webkit-animation: card-translate 1000ms 250ms backwards;
+  animation: card-translate 1000ms 250ms backwards;
+}
+
+.anim2 {
+  -webkit-animation: card-translate 1000ms 500ms backwards;
+  animation: card-translate 1000ms 500ms backwards;
+}
+
+.anim3 {
+  -webkit-animation: card-translate 1000ms 750ms backwards;
+  animation: card-translate 1000ms 750ms backwards;
+}
+
+.anim4 {
+  -webkit-animation: card-translate 1000ms 1000ms backwards;
+  animation: card-translate 1000ms 1000ms backwards;
+}
+
+.anim5 {
+  -webkit-animation: card-translate 1000ms 1250ms backwards;
+  animation: card-translate 1000ms 1250ms backwards;
+}
+
+.anim6 {
+  -webkit-animation: card-translate 1000ms 1500ms backwards;
+  animation: card-translate 1000ms 1500ms backwards;
+}
+
+.anim7 {
+  -webkit-animation: card-translate 1000ms 1750ms backwards;
+  animation: card-translate 1000ms 1750ms backwards;
+}
+
+.anim8 {
+  -webkit-animation: card-translate 1000ms 2000ms backwards;
+  animation: card-translate 1000ms 2000ms backwards;
+}
+
+.anim9 {
+  -webkit-animation: card-translate 1000ms 2250ms backwards;
+  animation: card-translate 1000ms 2250ms backwards;
+}
+
+.anim10 {
+  -webkit-animation: card-translate 1000ms 2500ms backwards;
+  animation: card-translate 1000ms 2500ms backwards;
+}
+
+@media screen and (min-width: 768px) {
+  header .fa-arrow-left {
+    top: 0.7em;
+    left: 2em;
+    font-size: 2em;
+    opacity: 0.77;
+  }
+
+  .menu header {
+    justify-content: space-around;
+    max-width: 800px;
+  }
+  .menu header h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+  .menu__article fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .menu__article legend {
+    margin: auto;
+    font-size: 1.2em;
+    width: max-content;
+  }
+  .menu__article form {
+    max-width: 800px;
+  }
+
+  .card {
+    text-align: left;
+    width: 45%;
+    max-width: 440px;
+    height: 85px;
+    margin-top: 1.5em;
+  }
+  .card__description h3 {
+    font-size: 1.1em;
+  }
+  .card__description p {
+    font-size: 1.1em;
+  }
+  .card__price {
+    font-size: 1em;
+  }
+  .card .fa-solid {
+    width: 27%;
+    margin-right: -27%;
+  }
+
+  .order {
+    width: 32%;
+  }
+}
+.last-card {
+  margin-right: 50%;
+}
+
+@media screen and (min-width: 1280px) {
+  .background {
+    height: 65vh;
+  }
+
+  .menu header {
+    max-width: 1440px;
+  }
+  .menu header h2 {
+    font-size: 2.5em;
+  }
+  .menu header .fa-heart {
+    font-size: 2.8em;
+  }
+  .menu header .fa-heart::after {
+    margin-right: 10%;
+    top: 48%;
+  }
+  .menu header .fa-heart::before {
+    margin-right: 10%;
+    top: 48%;
+  }
+  .menu__article {
+    max-width: 1440px;
+    margin: auto;
+  }
+  .menu__article fieldset {
+    margin-top: 4em;
+  }
+  .menu__article legend {
+    font-size: 1.5em;
+    width: 5.5%;
+  }
+  .menu__article form {
+    width: 70%;
+    max-width: 1440px;
+  }
+
+  .card {
+    height: 6em;
+    margin-top: 2em;
+  }
+  .card__description h3 {
+    font-size: 1.3em;
+  }
+  .card__description p {
+    font-size: 1.2em;
+  }
+  .card__price {
+    font-size: 1.1em;
+  }
+  .card .fa-solid {
+    width: 18%;
+    margin-right: -18%;
+  }
+  .card .fa-solid::after {
+    font-size: 1.2em;
+    width: 1.3em;
+    height: 1.3em;
+  }
+
+  .order {
+    width: 27%;
+    font-size: 1.5em;
+    margin-top: 3em;
+    height: 2.5em;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */

@@ -1,0 +1,176 @@
+//Importations des layout,components,utils et ma base pour ma page d'acceuil 
+@import "./style/sass/base/base";
+@import "./style/sass/utils/_variables.scss";
+@import "./style/sass/utils/_mixin.scss";
+@import "./style/sass/components/_loader.scss";
+@import "./style/sass/layouts/_header.scss";
+@import "./style/sass/components/_new.scss";
+@import "./style/sass/layouts/_footer.scss";
+
+
+h2{
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+h3
+{
+    font-size: 1em;
+    margin-bottom: 0px;
+}
+
+//Positionnement du titres de mes sections 
+section:nth-child(2) header, section:last-child header{
+    display: flex;
+    justify-content: left;
+    h2{
+        text-align: left;
+        margin-left: 8%;
+    }
+}
+
+//Section information
+.information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-bg;
+    @import "./style/sass/components/_position.scss";
+    header{
+        width: 85%;
+        max-width:260px;
+    }
+    &__description{
+        opacity: 0.7;
+        width: 95%;
+        max-width: 320px;
+        margin: 0 auto 40px auto;
+        text-align: center;
+    } 
+    @import "./style/sass/components/_navigation.scss";
+}
+
+//Bloc Fonctionnement
+.working{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 30px 0;
+    max-width: 1280px;
+    @import "./style/sass/components/_buttons.scss";
+}
+//Bloc pour mes articles de restaurant
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: $color-bg;
+    &__header{
+        min-width: 100%;
+    }
+    &__article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 40px;
+        @import "./style/sass/components/_card.scss";
+    }
+}
+
+//Partie media queries - ajustement de mes titres de section
+@media screen and (min-width:474px){
+    section:nth-child(2) header{
+        justify-content: center;
+        h2{
+            margin-left: 0;
+            margin-right: 230px;
+        }
+    } 
+    section:last-child header{
+        justify-content: center;
+        h2{
+            margin-left: 0;
+            margin-right: 260px;
+        }
+    }
+}
+//Partie medium-portable
+@media screen and (min-width:520px){
+    h3{
+        font-size: 1.4em;
+    }
+    h2{
+        font-size: 1.6em;
+    }
+    section:nth-child(2) header{
+        h2{
+            margin-right: 180px;
+        }
+    } 
+    section:last-child header{
+        h2{
+            margin-right: 230px;
+        }
+    }
+    .information{
+        header{
+            max-width: 340px;
+        }
+        &__description{
+            font-size: 1.2em;
+            max-width: 460px;
+        }
+    }
+}
+//Partie tablette
+@media screen and (min-width:768px) {
+    h2{
+        font-size: 1.8em;
+    }
+    section:nth-child(2){
+        padding-bottom: 30px;
+        header h2{
+            margin-right: 0;
+        }
+    } 
+    section:last-child header{
+        h2{
+            margin-right: 0;
+        }
+    }
+    .information{
+        header{
+            max-width: none;
+        }
+        &__description{
+            font-size: 1.6em;
+            max-width: none;
+        }
+    }
+    .working{
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+    }
+    .restaurants{
+        &__header{
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        &__article{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+    }
+}
+//Partie desktop
+@media screen and (min-width:1280px) {  
+    .working{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -1,0 +1,384 @@
+//Importations des éléments dont j'ai besoin
+@import "../base/_base.scss";
+@import "../utils/_mixin.scss";
+@import "../utils/_variables.scss";
+@import "../layouts/_header.scss";
+@import "../layouts/_footer.scss";
+
+@-webkit-keyframes card-translate{
+    0%{   
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    20%{
+        opacity:0.2;
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+//Animations d'apparition de mes plats
+@keyframes card-translate{
+    0%{   
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    20%{
+        opacity:0.2;
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+h3
+{
+    font-size: 25px;
+    margin-bottom: 0px;
+    margin-top: 25px;
+}
+
+header{
+    align-items: center;
+    position: relative;
+    .fa-arrow-left{
+        position: absolute;
+        font-size: 24px;
+        left: 30px;
+        top: 18px;
+        opacity: 0.77;
+    }
+}
+
+//Je change l'index de mon background en le plaçant en second plan
+.background{
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    -o-object-fit:cover;
+       object-fit:cover;
+    z-index: -1;
+}
+
+.menu{
+    margin-top: -75px;
+    width: 100%;
+    border-radius: 65px 65px 0 0;
+    background-color: #eaf0fa;
+    position: relative;
+    header{
+        justify-content: left;
+        width: 90%;
+        max-width: 400px;
+        margin: auto;
+        //Importation du coeur pour le menu
+        @import "../components/_heart.scss";
+        .fa-heart::after{
+            top: 53%;
+        }
+        .fa-heart::before{
+            top: 53%;
+        }
+        .fa-heart{
+            font-size: 35px;
+        }
+        h2{
+            padding-top: 70px;
+            font-size: 1.4em;
+        }
+    }
+    &__article{
+        width: 100%;
+        fieldset{
+            display: inline-block;
+            margin-top: 20px;
+            min-width: 100%;
+            padding: 0;
+        }
+        legend{
+            display: block;
+            border-bottom: #99E2D0 3px solid;
+            width: 12%;
+            padding-bottom: 5px;
+            font-size: 1em;
+        }
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        max-width: 400px;
+        margin: auto;
+    }
+}
+//Configuration de mon animation de sélection par un overflow de mon bloc
+.card{
+    display: flex;
+    background: white;
+    align-items:center;
+    margin: 15px 0 10px 0;
+    height: 75px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 0.75);
+    width: 100%;
+    overflow: hidden;
+    //Le contenu du bloc description sera rogné par des points de supsensions et ne passera pas a la ligne. 
+    &__description{
+        font-size: 0.9em;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-left: 4%;
+        width: 82%;
+        h3{
+            margin: 0 0 10px 0;
+            font-size: 1em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        p{
+            //Le "display:inline" du paragraphe est important pour le rognage du contenu
+            display: inline;
+            font-size: 1em;
+        }
+    }
+    &__price{
+        font-weight: bold;
+        padding: 30px 0 0 0; 
+        margin-left: auto;
+        font-size: 0.9em;
+    }
+    .fa-solid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background-color: white;
+        text-align: center;
+        background: #99E2D0;
+        border-radius: 0 15px 15px 0;
+        line-height: 20px;
+        width: 20%;
+        margin: 0 -20% 0 1em;
+        &::after{
+            content: "\f00c";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            color:#99E2D0;
+            border-radius: 50px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &:hover{
+        .fa-solid{
+            margin-right: 0; 
+            transition: margin 600ms;
+            &::after{
+                transform: rotate(2turn);
+                transition: transform 600ms;
+            }
+        }
+    }
+}
+//Configuration du boutton d'envoie de formulaire
+.order{
+    margin: 35px auto 80px auto;
+    @include button($color-primary,$color-secondary);
+    border: none;
+    width: 60%;
+    height: 50px;
+    font-size: 1em;
+}
+
+footer ul{
+    margin-top:30px;
+}
+
+//Animations d'apparition de mes plats en jouant sur leurs délais 
+.anim1{
+    -webkit-animation: card-translate 1000ms 250ms backwards;
+            animation: card-translate 1000ms 250ms backwards;
+}
+.anim2{
+    -webkit-animation: card-translate 1000ms 500ms backwards;
+            animation: card-translate 1000ms 500ms backwards;
+}
+.anim3{
+    -webkit-animation: card-translate 1000ms 750ms backwards;
+            animation: card-translate 1000ms 750ms backwards;
+}
+.anim4{
+    -webkit-animation: card-translate 1000ms 1000ms backwards;
+            animation: card-translate 1000ms 1000ms backwards;
+}
+.anim5{
+    -webkit-animation: card-translate 1000ms 1250ms backwards;
+            animation: card-translate 1000ms 1250ms backwards;
+}
+.anim6{
+    -webkit-animation: card-translate 1000ms 1500ms backwards;
+            animation: card-translate 1000ms 1500ms backwards;
+}
+.anim7{
+    -webkit-animation: card-translate 1000ms 1750ms backwards;
+            animation: card-translate 1000ms 1750ms backwards;
+}
+.anim8{
+    -webkit-animation: card-translate 1000ms 2000ms backwards;
+            animation: card-translate 1000ms 2000ms backwards;
+}
+.anim9{
+    -webkit-animation: card-translate 1000ms 2250ms backwards;
+            animation: card-translate 1000ms 2250ms backwards;
+}
+.anim10{
+    -webkit-animation: card-translate 1000ms 2500ms backwards;
+            animation: card-translate 1000ms 2500ms backwards;
+}
+
+//Partie media queries de ma page de menu - tablette
+@media screen and (min-width: 768px) {
+    header{
+        .fa-arrow-left{
+            top: 0.7em;
+            left: 2em;
+            font-size: 2em;
+            opacity: 0.77;
+        }
+        
+    }
+    .menu{
+        header{
+            justify-content: space-around;
+            max-width: 800px;
+            h2{
+                font-size: 2em;
+                text-align: center;
+            }
+        }
+        &__article{
+            fieldset{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            legend{
+                margin: auto;
+                font-size: 1.2em;
+                width:max-content;
+                
+            }
+            form{
+                max-width: 800px;
+            }
+        }
+    }
+    .card{
+        text-align: left;
+        width: 45%;
+        max-width: 440px;
+        height: 85px;
+        margin-top: 1.5em;
+        &__description{
+            h3{
+                font-size: 1.1em;
+            }
+            p{
+                font-size: 1.1em;
+            }
+        }
+        &__price{
+            font-size: 1em;
+        }
+        .fa-solid{
+            width: 27%;
+            margin-right: -27%;
+        }
+    }
+
+    .order{
+        width: 32%;
+    }
+}
+
+.last-card{
+    margin-right: 50%;
+}
+
+//Partie media queries de ma page de menu - desktop
+@media screen and (min-width:1280px) {
+    .background{
+        height: 65vh;
+    }
+    .menu{
+        header{
+            max-width: 1440px;
+            h2{
+                font-size: 2.5em;
+            }
+            .fa-heart{
+                font-size: 2.8em;
+            }
+            .fa-heart::after{
+                margin-right: 10%;
+                top: 48%;
+            }
+            .fa-heart::before{
+                margin-right: 10%;
+                top: 48%;
+            }
+        }
+        &__article{
+            max-width: 1440px;
+            margin: auto;
+            fieldset{
+                margin-top: 4em;
+            }
+            legend{
+                font-size: 1.5em;
+                width: 5.5%;
+            }
+            form{
+                width: 70%;
+                max-width: 1440px;
+            }
+        }
+    }
+    .card{
+        height: 6em;
+        margin-top: 2em;
+        &__description{
+            h3{
+                font-size: 1.3em;
+            }
+            p{
+                font-size: 1.2em;
+            }
+        }
+        &__price{
+            font-size: 1.1em;
+        }
+        .fa-solid{
+            width: 18%;
+            margin-right: -18%;
+            &::after{
+                font-size: 1.2em;
+                width: 1.3em;
+                height:1.3em;
+            }
+        }
+    }
+
+    .order{
+        width: 27%;
+        font-size: 1.5em;
+        margin-top: 3em;
+        height: 2.5em;
+    }
+}
