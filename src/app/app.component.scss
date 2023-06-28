@@ -1,0 +1,25 @@
+//Définition des variables colors
+$color-primary: #9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+$color-bg:lighten($color: #DEEBFF, $amount: 3.5%);
+
+//Configuration de mon bloc "new" pour nos nouvelles cartes
+.new{  
+    position: relative;
+}
+// Placement du pseudo élément par rapport à ça classe, pas besoin de créer du html inutile (gain de temps)
+.new::before{
+    content: "Nouveau";
+    position: absolute;
+    top: 20px;
+    right: 3%;
+    font-weight: bold;
+    font-size: 1.1em;
+    width: 25%;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: $color-tertiary;
+    color: darken($color: $color-tertiary, $amount: 30%);
+    text-align: center;
+}

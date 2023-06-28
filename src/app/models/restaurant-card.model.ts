@@ -1,8 +1,8 @@
 export class RestaurantCard {
-    constructor(public restaurantPage:string,
+    constructor(public link:string,
                 public img:string,
                 public title:string,
-                public town: string,
+                public location: string,
                 public newCard: Boolean){
                 }
 }
