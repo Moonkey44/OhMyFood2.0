@@ -12,7 +12,8 @@ import { OMFInformationComponent } from './omf-information/omf-information.compo
 import { OMFOperationComponent } from './omf-operation/omf-operation.component';
 import { OMFRestaurantsComponent } from './omf-restaurants/omf-restaurants.component';
 import { OMFFooterComponent } from './omf-footer/omf-footer.component';
-import { OMFLoaderComponent } from './omf-loader/omf-loader.component'
+import { OMFLoaderComponent } from './omf-loader/omf-loader.component';
+import { HeartComponent } from './heart/heart.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { OMFLoaderComponent } from './omf-loader/omf-loader.component'
     OMFOperationComponent,
     OMFRestaurantsComponent,
     OMFFooterComponent,
-    OMFLoaderComponent
+    OMFLoaderComponent,
+    HeartComponent
   ],
   imports: [
     BrowserModule

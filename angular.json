@@ -117,8 +117,6 @@
               "src/assets"
             ],
             "styles": [
-              "src/normalize.scss",
-              "src/reset.scss",
               "src/styles.scss"
             ],
             "scripts": []

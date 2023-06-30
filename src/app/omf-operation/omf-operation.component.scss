@@ -15,7 +15,7 @@
         border: none;
         height: 4.5em;
         width: 85%;
-        max-width: 400px;
+        max-width: 300px;
         margin-bottom: 10px;
         margin-top: 10px;
         border-radius: 20px;
@@ -79,6 +79,7 @@
     @media screen and (min-width:520px) {
         &__btn{
             font-size: 1.2em;
+            max-width: 380px;
         }
         .btn-label{
             width: 25%;
@@ -91,38 +92,34 @@
             }
         }
     }
-
-    @media screen and (min-width:1020px) {
-        &__btn{
-            &:last-child{
-                margin-top: 10px;
-            }
-        }
-    }
-}
-
-//Partie tablette
-@media screen and (min-width:768px) {
-    .working{
+    
+    //Partie tablette
+    @media screen and (min-width:768px) {
         flex-direction: row;
         justify-content: space-around;
         flex-wrap: wrap;
         &__btn{
             max-width: 310px;
             &:last-child{
-                margin-top: 30px;
+                margin-top: 20px;
             }
         }
     }
-}
 
-//Partie desktop
-@media screen and (min-width:1280px) {  
-    .working{
-        margin-left: auto;
-        margin-right: auto;
+    @media screen and (min-width:1020px) {
         &__btn{
-            max-width: 380px;
+            max-width: 360px;
+            &:last-child{
+                margin-top: 10px;
+            }
         }
     }
+
+    //Partie desktop
+    @media screen and (min-width:1280px) {  
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
+
+
