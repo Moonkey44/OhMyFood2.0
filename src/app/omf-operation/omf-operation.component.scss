@@ -1,0 +1,128 @@
+@import "../../variables.scss";
+
+//Bloc Fonctionnement
+.working{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 30px 0;
+    max-width: 1280px;
+    // Configuration de mes bouttons pour la section "Fonctionnement"
+    &__btn{
+        display: flex;
+        align-items: center;
+        background: $color-bg;
+        border: none;
+        height: 4.5em;
+        width: 85%;
+        max-width: 400px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 0.65);
+        font-size: 0.9em;
+        margin: 10px 15px 10px 15px;
+        p{
+            text-align: left;
+            font-weight: bold;
+        }
+        //J'ai rassemblé le numéro avec son icône dans une div pour mieux agir sur le contenu du boutton
+        .btn-label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 28%;
+            position: relative;
+            &__num{   
+                position: absolute;
+                background: $color-primary;
+                color: white;
+                width: 25px;
+                height:25px;
+                border-radius: 14px;
+                line-height: 26px;
+                text-align: center;
+                left: -14px;
+            }
+            //Configuration des icônes du 2ème boutton par pseudo-éléments pour une meilleure gestion du bloc
+            &__icon{
+                opacity: 0.5;
+                color: black;
+                font-size: 1.2em;
+                &:nth-child(2){
+                    position: absolute;
+                    ::before{
+                        content: "\f142";
+                        margin-right: 0.1em;  
+                    }
+                    ::after{
+                        content: "\f0c9";
+                    }
+                }          
+            }  
+        }
+
+        //Eclaircissement du background + augmentation de l'ombre portée au survol
+        &:hover{
+            background: lighten($color-bg,1%);
+            box-shadow: 0 4px 10px 1px rgba(200, 205, 205, 1);
+            .btn-label{
+                &__icon{
+                    color:$color-primary;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    //Partie media-queries du boutton
+    @media screen and (min-width:520px) {
+        &__btn{
+            font-size: 1.2em;
+        }
+        .btn-label{
+            width: 25%;
+            &__num{
+                font-size: 1em;
+            }
+            &__icon{
+                font-size: 1.3em;
+                margin-top: 1px;
+            }
+        }
+    }
+
+    @media screen and (min-width:1020px) {
+        &__btn{
+            &:last-child{
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+//Partie tablette
+@media screen and (min-width:768px) {
+    .working{
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        &__btn{
+            max-width: 310px;
+            &:last-child{
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+//Partie desktop
+@media screen and (min-width:1280px) {  
+    .working{
+        margin-left: auto;
+        margin-right: auto;
+        &__btn{
+            max-width: 380px;
+        }
+    }
+}

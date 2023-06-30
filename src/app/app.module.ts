@@ -11,7 +11,8 @@ import { MainComponent } from './main/main.component';
 import { OMFInformationComponent } from './omf-information/omf-information.component';
 import { OMFOperationComponent } from './omf-operation/omf-operation.component';
 import { OMFRestaurantsComponent } from './omf-restaurants/omf-restaurants.component';
-import { OMFFooterComponent } from './omf-footer/omf-footer.component'
+import { OMFFooterComponent } from './omf-footer/omf-footer.component';
+import { OMFLoaderComponent } from './omf-loader/omf-loader.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { OMFFooterComponent } from './omf-footer/omf-footer.component'
     OMFInformationComponent,
     OMFOperationComponent,
     OMFRestaurantsComponent,
-    OMFFooterComponent
+    OMFFooterComponent,
+    OMFLoaderComponent
   ],
   imports: [
     BrowserModule

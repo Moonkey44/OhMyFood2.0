@@ -1,1 +1,44 @@
 
+
+
+//Positionnement du titres de mes sections 
+section:nth-child(2) header, section:last-child header{
+    display: flex;
+    justify-content: left;
+    h2{
+        text-align: left;
+        margin-left: 8%;
+    }
+}
+
+//Partie media queries - ajustement de mes titres de section
+@media screen and (min-width:474px){
+    section:nth-child(2) header{
+        justify-content: center;
+        h2{
+            margin-left: 0;
+            margin-right: 230px;
+        }
+    } 
+    section:last-child header{
+        justify-content: center;
+        h2{
+            margin-left: 0;
+            margin-right: 260px;
+        }
+    }
+}
+//Partie medium-portable
+@media screen and (min-width:520px){
+    section:nth-child(2) header{
+        h2{
+            margin-right: 180px;
+        }
+    } 
+    section:last-child header{
+        h2{
+            margin-right: 230px;
+        }
+    }
+}
+

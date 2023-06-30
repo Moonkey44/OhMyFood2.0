@@ -10,6 +10,19 @@ h1,h2,h3{
     font-weight: normal;
 }
 
+h2{
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+h3
+{
+    font-size: 1em;
+    margin-bottom: 0px;
+}
+
 p,li{
     font-family: "Roboto","sans-serif";   
 }
@@ -18,15 +31,19 @@ a{
     color: inherit;
 }
 
+//Partie medium-portable
+@media screen and (min-width:520px){
+    h3{
+        font-size: 1.4em;
+    }
+    h2{
+        font-size: 1.6em;
+    }
+}
 
-//Configuration du mixin boutton, car réutilisé plusieurs fois dans mon css
-@mixin button($color-primary,$color-secondary){
-    color: white;
-    border-radius: 40px;
-    box-shadow: 0px 5px 5px 2px #cfcbcbb3;
-    background-image: linear-gradient($color-secondary,$color-primary);
-    &:hover{
-        background-image: linear-gradient(lighten($color-secondary,3%), lighten($color-primary,3%));
-        box-shadow: 0px 5px 5px 2px rgba(207,203,203,1);
+//Partie tablette
+@media screen and (min-width:768px) {
+    h2{
+        font-size: 1.8em;
     }
 }
