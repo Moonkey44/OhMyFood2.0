@@ -1,13 +1,11 @@
-<article class="restaurants__article">
-    <a class="card" [href]="RestaurantCard.link">
-      <figure [ngClass] = "{ new: RestaurantCard.newCard === true }">
-        <img [src]="RestaurantCard.img" [alt]="RestaurantCard.title"/>
-        <figcaption class="card__figcaption">
-          <h3><mark>{{RestaurantCard.title}}</mark></h3>
-          <p>{{RestaurantCard.location}}</p>
-          <span class="fa-solid fa-heart"></span>
-        </figcaption>
-      </figure>
-    </a>
-</article>
+<a class="card" [href]="RestaurantCard.link">
+  <figure [ngClass] = "{ new: RestaurantCard.newCard === true }">
+    <img [src]="RestaurantCard.img" [alt]="RestaurantCard.title"/>
+    <figcaption class="card__figcaption">
+      <h3><mark>{{RestaurantCard.title}}</mark></h3>
+      <p>{{RestaurantCard.location}}</p>
+      <span class="fa-solid fa-heart"></span>
+    </figcaption>
+  </figure>
+</a>
 

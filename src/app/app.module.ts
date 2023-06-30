@@ -6,14 +6,24 @@ import { RestaurantCardComponent } from './restaurant-card/restaurant-card.compo
 import { registerLocaleData } from '@angular/common';
 import * as fr from '@angular/common/locales/fr';
 import { RestaurantCardListComponent } from './restaurant-card-list/restaurant-card-list.component';
-import { OMFHeaderComponent } from './omf-header/omf-header.component'
+import { OMFHeaderComponent } from './omf-header/omf-header.component';
+import { MainComponent } from './main/main.component';
+import { OMFInformationComponent } from './omf-information/omf-information.component';
+import { OMFOperationComponent } from './omf-operation/omf-operation.component';
+import { OMFRestaurantsComponent } from './omf-restaurants/omf-restaurants.component';
+import { OMFFooterComponent } from './omf-footer/omf-footer.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     RestaurantCardComponent,
     RestaurantCardListComponent,
-    OMFHeaderComponent
+    OMFHeaderComponent,
+    MainComponent,
+    OMFInformationComponent,
+    OMFOperationComponent,
+    OMFRestaurantsComponent,
+    OMFFooterComponent
   ],
   imports: [
     BrowserModule
