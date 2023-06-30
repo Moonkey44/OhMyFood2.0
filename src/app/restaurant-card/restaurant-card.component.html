@@ -1,6 +1,6 @@
 <article class="restaurants__article">
-    <a class="card" [ngClass] = "{new = }" = [href]="RestaurantCard.link">
-      <figure>
+    <a class="card" [href]="RestaurantCard.link">
+      <figure [ngClass] = "{ new: RestaurantCard.newCard === true }">
         <img [src]="RestaurantCard.img" [alt]="RestaurantCard.title"/>
         <figcaption class="card__figcaption">
           <h3><mark>{{RestaurantCard.title}}</mark></h3>
