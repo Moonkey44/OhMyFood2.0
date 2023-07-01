@@ -12,11 +12,8 @@
         align-items: center;
         padding-bottom: 40px;
     }
-}
-
-//Partie tablette
-@media screen and (min-width:768px) {
-    .restaurants{
+    //Partie tablette
+    @media screen and (min-width:768px) {
         &__header{
             justify-content: center;
             margin-bottom: 20px;
