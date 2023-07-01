@@ -53,8 +53,11 @@
             max-width: 300px;
             justify-content: center;
             align-items: center;      
-            margin: 0 auto 60px auto;
+            margin: 0 auto 30px auto;
             @include button($color-primary,$color-secondary);
+        }
+        &__button:hover{
+            cursor: pointer;
         }
     }
 }
