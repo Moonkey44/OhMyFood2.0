@@ -1,0 +1,14 @@
+<form>
+    <label for="user-select">Quel type de connexion ?</label>
+    <select name="users" id="user-select">
+        <option value="client" selected>Client</option>
+        <option value="admin">Administrateur</option>
+    </select>
+    <label for="user">Utilisateur :</label>
+    <input type="text" id="user" name="user" required min-length="4" maxlength="20">
+
+    <label for="password">Mot de passe :</label>
+    <input type="password" id="password" name="password" required minlength="3" maxlength="20">
+
+    <input type="submit" (click)="onRedirected()">
+</form>

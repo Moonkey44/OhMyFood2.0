@@ -7,13 +7,15 @@ import { registerLocaleData } from '@angular/common';
 import * as fr from '@angular/common/locales/fr';
 import { RestaurantCardListComponent } from './restaurant-card-list/restaurant-card-list.component';
 import { OMFHeaderComponent } from './omf-header/omf-header.component';
-import { MainComponent } from './main/main.component';
 import { OMFInformationComponent } from './omf-information/omf-information.component';
 import { OMFOperationComponent } from './omf-operation/omf-operation.component';
 import { OMFRestaurantsComponent } from './omf-restaurants/omf-restaurants.component';
 import { OMFFooterComponent } from './omf-footer/omf-footer.component';
 import { OMFLoaderComponent } from './omf-loader/omf-loader.component';
-import { HeartComponent } from './heart/heart.component'
+import { HeartComponent } from './heart/heart.component';
+import { OMFHomepageComponent } from './omf-homepage/omf-homepage.component'
+import { AppRoutingModule } from './app-routing.module';
+import { ConnexionPageComponent } from './connexion-page/connexion-page.component';
 
 @NgModule({
   declarations: [
@@ -21,16 +23,18 @@ import { HeartComponent } from './heart/heart.component'
     RestaurantCardComponent,
     RestaurantCardListComponent,
     OMFHeaderComponent,
-    MainComponent,
     OMFInformationComponent,
     OMFOperationComponent,
     OMFRestaurantsComponent,
     OMFFooterComponent,
     OMFLoaderComponent,
-    HeartComponent
+    HeartComponent,
+    OMFHomepageComponent,
+    ConnexionPageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'fr-FR'} 
