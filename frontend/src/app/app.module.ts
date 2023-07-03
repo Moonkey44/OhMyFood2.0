@@ -16,6 +16,9 @@ import { HeartComponent } from './heart/heart.component';
 import { OMFHomepageComponent } from './omf-homepage/omf-homepage.component'
 import { AppRoutingModule } from './app-routing.module';
 import { ConnexionComponent } from './connexion/connexion.component';
+import { RestaurantMenuComponent } from './restaurant-menu/restaurant-menu.component';
+import { MenuCardComponent } from './menu-card/menu-card.component';
+import { BackArrowComponent } from './back-arrow/back-arrow.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { ConnexionComponent } from './connexion/connexion.component';
     OMFLoaderComponent,
     HeartComponent,
     OMFHomepageComponent,
-    ConnexionComponent
+    ConnexionComponent,
+    RestaurantMenuComponent,
+    MenuCardComponent,
+    BackArrowComponent
   ],
   imports: [
     BrowserModule,
