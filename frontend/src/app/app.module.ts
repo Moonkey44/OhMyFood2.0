@@ -15,7 +15,7 @@ import { OMFLoaderComponent } from './omf-loader/omf-loader.component';
 import { HeartComponent } from './heart/heart.component';
 import { OMFHomepageComponent } from './omf-homepage/omf-homepage.component'
 import { AppRoutingModule } from './app-routing.module';
-import { ConnexionPageComponent } from './connexion-page/connexion-page.component';
+import { ConnexionComponent } from './connexion/connexion.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { ConnexionPageComponent } from './connexion-page/connexion-page.componen
     OMFLoaderComponent,
     HeartComponent,
     OMFHomepageComponent,
-    ConnexionPageComponent
+    ConnexionComponent
   ],
   imports: [
     BrowserModule,

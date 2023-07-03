@@ -1,6 +1,6 @@
 //Configuration de l'entête de la page
 .header{
-    height: 60px;
+    min-height: 2vh;
     display: flex;
     justify-content: center;
     position: relative;
@@ -10,12 +10,12 @@
         align-items: center;
         margin: 0;
         padding: 0;
-        width: 50%;  
+        width: 100%;  
     }
     img{
         position: absolute;
         width: 60%;
-        max-width: 12em;
+        max-width: 20em;
     }
 }
 

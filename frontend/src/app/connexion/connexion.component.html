@@ -10,5 +10,9 @@
     <label for="password">Mot de passe :</label>
     <input type="password" id="password" name="password" required minlength="3" maxlength="20">
 
-    <input type="submit" (click)="onRedirected()">
+    <div class="redirectedDiv">
+        <button routerLink="">Retour</button>
+        <input type="submit" (click)="onRedirected()">
+    </div>
+    
 </form>

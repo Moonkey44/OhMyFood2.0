@@ -4,12 +4,11 @@ import { OMFInformationComponent } from "./omf-information/omf-information.compo
 import { OMFOperationComponent } from "./omf-operation/omf-operation.component";
 import { RestaurantCardListComponent } from "./restaurant-card-list/restaurant-card-list.component";
 import { OMFHomepageComponent } from "./omf-homepage/omf-homepage.component";
-import { ConnexionPageComponent } from "./connexion-page/connexion-page.component";
+import { ConnexionComponent } from "./connexion/connexion.component";
 
  const routes: Routes = [
-    { path:"", component: OMFHomepageComponent},
-    { path: "homepage", component: OMFHomepageComponent },
-    { path: "connexion", component: ConnexionPageComponent}
+    { path: "", component: OMFHomepageComponent },
+    { path:"connexion", component: ConnexionComponent}
  ];
 
 @NgModule({
